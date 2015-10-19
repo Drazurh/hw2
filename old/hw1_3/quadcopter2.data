@@ -1,0 +1,48 @@
+num_points 54
+position 0.0 0.0
+color 1.0 0.0 0.0 1.0
+num_triangles 2
+-1 1 1 1 1 -1
+-1 1 1 -1 -1 -1
+position 0.0 0.0
+color 0 0 0 1
+num_triangles 2
+.75 1 1 .75 2 1.75
+.75 1 1 .75 1.75 2
+position 0.0 0.0
+color 0 0 0 1
+num_triangles 2
+-.75 1 -1 .75 -2 1.75
+-.75 1 -1 .75 -1.75 2
+position 0.0 0.0
+color 0 0 0 1
+num_triangles 2
+-.75 -1 -1 -.75 -2 -1.75
+-.75 -1 -1 -.75 -1.75 -2
+position 0.0 0.0
+color 0 0 0 1
+num_triangles 2
+.75 -1 1 -.75 2 -1.75
+.75 -1 1 -.75 1.75 -2
+position 1.875 1.875
+color 0 1 0 1
+num_triangles 2
+-.1 0 0 1 .1 0
+-.1 0 0 -1 .1 0
+position -1.875 1.875
+color 0 1 0 1
+num_triangles 2
+-.1 0 0 1 .1 0
+-.1 0 0 -1 .1 0
+position -1.875 -1.875
+color 0 1 0 1
+num_triangles 2
+-.1 0 0 1 .1 0
+-.1 0 0 -1 .1 0
+position 1.875 -1.875
+color 0 1 0 1
+num_triangles 2
+-.1 0 0 1 .1 0
+-.1 0 0 -1 .1 0
+
+

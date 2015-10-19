@@ -1,3 +1,9 @@
+#include <GL/glew.h> 
+#include <GL/glut.h> 
+#include <Angel.h>
+
+#include <iostream>
+
 using namespace std;
 
 enum controls {LEFT,RIGHT,UP,DOWN,W,A,S,D};
