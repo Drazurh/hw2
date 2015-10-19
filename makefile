@@ -27,18 +27,24 @@
 include ./Makefile.defs
 
 # Next line says what options to use to compile programs
-OPTIONS+=-Wall ./angel06/include/ 
+OPTIONS+=-Wall;
 
 OBJECTS = $(patsubst %.cc,%,$(wildcard *.cc))
 
-all: $(OBJECTS)
+all: hw2
 
-# patterns to allow compilation of many c++ or c programs
-.c:
-	$(CC)  $@.c   $(InitShader) $(OPTIONS) $(LDLIBS) -o $@
+hw2: hw2.o game.o entity.o
+	$(CC)  hw2.o game.o entity.o  $(InitShader) $(OPTIONS) $(LDLIBS) -o hw2
 
-.cc:
-	$(CC)  $@.cc  $(InitShader) $(OPTIONS) $(LDLIBS) -o $@
+hw2.o: hw2.cc
+	$(CC) -c hw2.cc   $(InitShader) $(OPTIONS) $(LDLIBS) 
+
+game.o: game.cc
+	$(CC) -c game.cc   $(InitShader) $(OPTIONS) $(LDLIBS) 
+
+entity.o: entity.cc
+	$(CC) -c entity.cc $(InitShader) $(OPTIONS) $(LDLIBS)
+
 
 clean:
 	rm -f $(OBJECTS) *~

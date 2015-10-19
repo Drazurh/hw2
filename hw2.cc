@@ -1,7 +1,10 @@
-#include <GL/glew.h> 
-#include <GL/glut.h> 
+//#include <GL/glew.h> 
+//#include <GL/glut.h> 
 #include <Angel.h>
 
+#include "game.h"
+
+#include <stdlib.h>
 #include <iostream>
 
 using namespace std;
@@ -10,11 +13,20 @@ enum controls {LEFT,RIGHT,UP,DOWN,W,A,S,D};
 
 bool controller[8] = {false};
 
+Game game;
+
+// The only required callback, it must draw everything when called.
+extern "C" void displayCallback()
+{
+	glClear(GL_COLOR_BUFFER_BIT);
+}
+
 extern "C" void gameLoopCallback(){
 	
 	static const int dt = 20;
 	
 	static int current_t = 0;
+	static int t = 0;
 	
 	int new_t = glutGet(GLUT_ELAPSED_TIME);
 	
@@ -25,7 +37,7 @@ extern "C" void gameLoopCallback(){
 	current_t = new_t;	
 	accumulator += frame_t;
 	while(accumulator >= dt){
-		update(t,dt);
+		game.update(t,dt);
 		accumulator-=dt;
 		t+= dt;
 	}
@@ -140,12 +152,12 @@ void init()
 	GLuint buffer;
 	glGenBuffers(1, &buffer);
 	glBindBuffer(GL_ARRAY_BUFFER, buffer);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(quadcopter.points), quadcopter.points, GL_STATIC_DRAW);
+	//glBufferData(GL_ARRAY_BUFFER, sizeof(quadcopter.points), quadcopter.points, GL_STATIC_DRAW);
 	
 	
 	GLuint program = InitShader("vshaderHw1.glsl", "fshaderHw1.glsl");
 	
-	windowSizeLoc = glGetUniformLocation(program, "windowSize");
+	//windowSizeLoc = glGetUniformLocation(program, "windowSize");
 
 	GLuint loc = glGetAttribLocation(program, "vPosition");
 	glEnableVertexAttribArray(loc);

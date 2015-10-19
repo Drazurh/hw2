@@ -8,7 +8,7 @@
 
 
 # Use Solaris's compiler, not g++
-CC = gcc
+CC = /usr/bin/CC
 
 # Compiler options
 #CC_OPTIONS = -pedantic
@@ -20,7 +20,7 @@ INCS = -I/usr/local/include/ -I/home/cs425/code-egs/  -I/home/cs425/code-egs/ang
 OPTIONS = $(CC_OPTIONS)  $(INCS) 
 
 # must use the following when building a executable
-#LDLIBS = -L/opt/csw/lib -R/opt/csw/lib -lGLEW -lGL -lglut -lm -lGLU
+LDLIBS = -L/opt/csw/lib -R/opt/csw/lib -lGLEW -lGL -lglut -lm -lGLU
 #LDLIBS = -lGLEW -lGL -lglut -lm -lGLU
 
 # program to link in compiling all binaries that initialize shaders

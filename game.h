@@ -1,6 +1,8 @@
-
 #include "entity.h"
-#include <vector.h>
+#include <vector>
+
+#ifndef Game_h
+#define Game_h
 
 class Game{
   private:
@@ -9,12 +11,14 @@ class Game{
 	int state;
   public:
 	Game();
-	void update(int t, int dt);
-	
 	bool addEntity(Entity);
-	bool removeEntityByID(ID);
+	bool removeEntityByID(int);
 	
-	int getState(){return state};
+	void update(int t, int dt);
+
+	int getState(){return state;};
 	void reset();
 	void start();
-}
+};
+
+#endif

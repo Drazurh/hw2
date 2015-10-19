@@ -4,11 +4,11 @@ Entity::Entity(vec3 _position){
 	position = _position;
 }
 
-Entity::render(){
+void Entity::render(){
 	
 }
 
-Entity::update(){
+void Entity::update(){
 	position += velocity;
 	velocity += acceleration;
 	

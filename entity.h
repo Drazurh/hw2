@@ -1,10 +1,10 @@
-#include <GL/glut.h>
+//#include <GL/glut.h>
 #include <Angel.h>
 
 struct Vertex{
 	vec4 position;
 	vec4 color;
-}
+};
 
 class Entity{	
   protected:
@@ -21,4 +21,4 @@ class Entity{
 	Entity(vec3 _position);
 	void render();
 	void update();
-}
+};

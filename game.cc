@@ -1,12 +1,22 @@
 #include "game.h"
 
+void Game::update(int t, int dt){
+	
+}
+
 Game::Game(){
 	
 }
 
-void Game::update(int t, int dt);
-
-bool Game::addEntity(Entity);
-bool removeEntityByID(ID);
-void reset();
-void start();
+bool Game::addEntity(Entity){
+	return false;
+}
+bool Game::removeEntityByID(int ID){
+	return true;
+}
+void Game::reset(){
+	
+}
+void Game::start(){
+	
+}
